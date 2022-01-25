@@ -1,0 +1,228 @@
+body {
+  background-color: rgba(247, 246, 245,1);
+  font-family: 'Open Sans', sans-serif;
+  margin:0px;
+}
+
+#table1, #table4, #table3, #table0, #table2 {
+  border: none;
+  border-top: 1px solid rgba(71, 72, 74,0.1);
+
+    
+}
+
+
+table{
+/*width:100%;*/
+/*text-align: left;*/
+
+}
+
+#table0 td{
+  width:20%;
+}
+
+#table0 span:hover{
+  width :27%;
+  background-color: orange;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align:center ;
+}
+
+#table0 span{
+  text-align:center ;
+  width :27%;
+  border-radius: 5px;
+  text-decoration: underline;
+  text-decoration-color:orange;
+  padding:2px 15px;
+  font-size: 25px;
+}
+
+#table1 td, #table3 td{
+  width: 100px;
+}
+
+#table0 span:hover{
+  background-color: orange;
+  border-radius: 5px;
+  text-decoration: none;
+  
+}
+
+
+
+#table1 td{
+  width: 100px;
+}
+
+/*#table4 table :nth-child(1),#table4 table :nth-child(2),#table4 table:nth-child(3){
+  width:15%;
+}
+#table4 table :nth-child(4),#table4  table:nth-child(5){
+  width:25%;
+}*/
+#table4 td{
+  width:18%;
+  padding: 0px;
+  margin: 0px;
+}
+#ip6-config td,#ip4-config td{
+width: 18%;
+/*margin-left: 5px;*/
+
+/*padding:1px 25px;*/
+}
+
+select {
+  width:50%;
+  box-sizing:border-box;
+  display:inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  
+  /*padding: 8px 8px;*/
+  
+  }
+  label {
+    font-size: 16px;
+  }
+   input[type="text"],input[type="password"] {
+    width:40%;
+    box-sizing:border-box;
+    display:inline-block;
+    /*border: 1px solid #ccc;*/
+    border: none;
+    /*border-bottom: 1px solid rgba(124, 124, 130, 0.3);*/
+    text-decoration: underline;
+    text-decoration-color: rgba(124, 124, 130, 0.3);
+    box-sizing: border-box;
+    padding: 0px;
+    background-color:rgba(247, 246, 245,1);
+    margin-left: 4px;
+    /*padding: 8px 8px;*/
+    font-size: 16px;
+    }
+    input:focus{
+      background-color:rgba(247, 246, 245,1);
+      outline: none;
+    }
+
+  #buttons {
+    text-align: center;
+    margin:auto;
+  }
+ #buttons div{
+   display: inline-block;
+   padding :0px;
+   margin:auto;
+ }
+  #buttons button, #buttons span {
+    padding :10px 15px;
+     width : 8%;
+     border-radius: 5px;
+     margin-left: 0px;
+     border: 1px solid rgba(71, 72, 74,0.6);
+  }
+
+  #description, #delete {
+    /* background-color: rgba(199, 68, 28,0.5);*/
+     position:absolute;
+     left:100px;
+   }
+
+   #save-btn{
+     margin:auto;
+   }
+   
+  #save:hover {
+    background-color: rgba(48, 48,48,0.6);
+    color:white;
+  }
+  
+  .name {
+    font-size : em;
+  }
+  .plus{
+    text-align: center;
+    float:right;
+    font-size : 30px;
+    width : 30px;
+    background-color:rgba(58, 156, 158,0.6);
+    border-radius: 50px;
+  }
+
+   #addip4, #addip6 {
+    background-color:rgba(106, 224, 70,0.6) ;
+    border-radius: 10px;
+  }
+  
+  .vertical-menu {
+    width: 50px; /* Set a width if you like */
+    height: 100%;
+  }
+  
+  .vertical-menu a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+  }
+  
+  .vertical-menu a.active {
+    background-color: rgba(21, 25, 64,0.3); /* Add a green color to the "active/current" link */
+    color: white;
+  }
+
+  .vertical-menu {
+    float: left;
+    width: 16%;
+    height:100%;
+    background-color: rgba(247, 246, 245,1);
+    border-right: 1px solid orange;
+    font-size :20px;
+  }
+
+  .interface-page {
+    float: left;
+    width: 83%;
+  }
+
+  .device_info{
+    float: left;
+    width: 85%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #description input {
+    padding:5px;
+    border: 1px solid rgba(124, 124, 130, 0.3);
+    text-decoration: none;
+    border-radius: 5px;
+    width:70%;
+    margin:0px;
+  }
+
+  #description button{
+    margin:0px;
+    padding :5px;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+  }
+
+

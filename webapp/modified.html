@@ -1,0 +1,373 @@
+<html>
+
+<head>
+
+    <script src="modified.js"></script>
+    <!--<style>
+     body{
+       background-color: rgba(204, 209, 201,1);
+     }
+     
+    td {
+     width:20%;
+    }
+
+  </style> -->
+     <script src="interface.js"></script> 
+    <link rel="stylesheet" type="text/css" href="modified.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <form aria-disabled="">
+
+        <div id="table0">
+            <table class="info" style="width:100%" id="table-menu">
+                <tr>
+                    <td><span id="0" class="first-menu" onclick="waninfo(0)"> wan0 </span> </td>
+                    <td><span id="1" onclick="waninfo(1)">wan1</span> </td>
+                    <td><span id="2" onclick="waninfo(2)"> wan2</span> </td>
+                    <td><span id="3" onclick="waninfo(3)">wan3</span> </td>
+                    <td><span id="add-interface" onclick="waninfo(3)"><i class="fa fa-plus-circle"></i>add interface</span> </td>
+
+                </tr>
+            </table>
+        </div>
+
+        <fieldset id="table1">
+            <legend class="name">Port</legend>
+
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <label for="interface-name">Interface Name:</label>
+                        <input type="text" id="interface-name" name="interface-name">
+                    </td>
+                    <td>
+                        <label for="port-type">Port Type:</label>
+                        <select name="port-type" id="port-type" onchange="porttype()">
+                            <option value="">Select-option</option>
+                            <option value="Ethernet">Ethernet</option>
+                            <option value="USB 3G/4G">USB 3G/4G</option>
+                            <option value="Onboard 4G">Onboard 4G</option>
+                            <option value="v35-Modeum">v35-Modeum</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <label for="associated-port">Associated Port:</label>
+                        <select name="associated-port" id="associated-port">
+                            <option value="">Select-option</option>
+                            <option value="eth1">eth1</option>
+                            <option value="eth2">eth2</option>
+                            <option value="usb-2">usb-2</option>
+                            <option value="usb-3">usb-3</option>
+                        </select>
+                    </td>
+
+                    
+                    <td>
+                        <span><label for="vlan">Vlan:</label></span>
+                        <input type="text" id="vlan" placeholder="enter vlan" name="vlan">
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            <table style="width:100%">
+                <tr>
+                    <td>
+                        <label for="mtu">MTU:</label>
+                        <input type="text" id="mtu" name="mtu">
+
+                    </td>
+                    <td>
+                        <label for="auto-neg">Auto Negotiation:</label>
+                        <input type="radio" id="on" name="auto-neg" value="on" onchange="AutoNegOn()">
+                        <label>on</label>
+                        <input type="radio" id="off" name="auto-neg" value="off" onchange="AutoNegOff()">
+                        <label>off</label>
+                    </td>
+                    <td>
+                        <div id="auto-neg-speed-option">
+                            <label for="speed">Speed:</label>
+                            <input type="radio" id="speed50" name="speed" value="50">
+                            <label>50</label>
+                            <input type="radio" id="speed100" name="speed" value="100">
+                            <label>100</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="auto-neg-duplex-option">
+                            <label for="duplex">Duplex:</label>
+                            <input type="radio" id="halfduplex" name="duplex" value="duplex">
+                            <label>Half Duplex</label>
+                            <input type="radio" id="duplex" name="duplex" value="halfduplex">
+                            <label>Duplex</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table style="width:100%">
+                <br>            
+                <tr>
+                    <td>
+                        <div id="apn-option">
+                            <label for="apn">APN:</label>
+                            <input type="text" id="apn" name="apn">
+                        </div>
+                        <div id="mpls-option">
+                            <input type="checkbox" id="mpls" name="mpls">
+                            <label for="mpls">MPLS</label>
+
+                        </div>
+
+                    </td>
+                    <td>
+                        <div id="loopback-option1">
+                            <label for="loopback-ip">Loopback IP:</label>
+                            <input type="text" id="loopback-ip" name="loopback-ip">
+                        </div>
+                    </td>
+                    <td>
+                        <div id="loopback-mask-option">
+                            <label for="loopback-mask">Loopback Mask:</label>
+                            <input type="text" id="loopback-mask" name="loopback-mask">
+                        </div>
+                    </td>
+                    <td>
+
+                    </td>
+                    
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset id="table3">
+            <legend class="name">Network</legend>
+
+            <div id="network-option">
+                <div>
+                    <table style="width:100%">
+                        <tr>
+                            <td>
+                                <div id="dns4-option">
+                                    <label for="dns4">DNSv4:</label>
+                                    <input type="text" id="dns4" name="dns4">
+                                </div>
+                            </td>
+                            
+                            <td>
+                                <div id="dns6-option">
+                                    <label for="dns6">DNSv6:</label>
+                                    <input type="text" id="dns6" name="dns6">
+                                </div>
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div id="ip4-config">
+                    <div>IP Configuration v4</div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <label for="network-type">Type:</label>
+                                <select name="network-type" id="type4-0" onchange="networktype4(0)">
+                                    <option value="">Select-option</option>
+                                    <option value="static">static</option>
+                                    <option value="DHCP">DHCP</option>
+                                    <option value="PPoE">PPoE</option>
+                                </select>
+
+                            </td>
+
+                            <td>
+
+                                <div id="ip4-option-0">
+                                    <label for="ip4">IP:</label>
+                                    <input type="text" id="ip4-0" placeholder="8.8.8.8" name="ip4">
+                                </div>
+                                <div id="dhcp4-option-0">
+                                    <label for="dhcp4">DHCP:</label>
+                                    <input type="text" id="dhcp4-0" name="dhcp4">
+                                </div>
+                                <div id="username4-option-0">
+                                    <label for="username">UserName:</label>
+                                    <input type="text" id="username4-0" name="username">
+                                </div>
+
+                            <td>
+                                <div id="prefix-length4-option-0">
+                                    <label for="prefix-length4">Prefix:</label>
+                                    <input type="text" id="prefix-length4-0" name="">
+                                </div>
+                                <div id="password4-option-0">
+                                    <label for="password">Password:</label>
+                                    <input type="password" id="password4-0" name="password">
+                                </div>
+                            </td>
+                            <td>
+                                <div id="gateway4-option-0">
+                                    <label for="gateway4">GateWay:</label>
+                                    <input type="text" id="gateway4-0" name="gateway4">
+                                </div>
+                                
+                                
+                            </td>
+                            <td>
+                                <div id ="static-nat-ip4-option-0">
+                                <label for="static-nat-ip4">Nat IP:</label>
+                                <input type="text" id="static-nat-ip4-0" name="">
+                                </div>
+                            </td>
+
+                            
+                        </tr>
+
+                    </table>
+
+                </div>
+                <br>
+                <div id="ip6-config">
+                    <div>IP Configuration v6</div>
+                    <table style="width:100%">
+                        <tr>
+                            <td>
+                                <label for="network-type">Type:</label>
+                                <select name="network-type" id="type6-0" onchange = "networktype6(0)">
+                                    <option value="">Select-option</option>
+                                    <option value="static">static</option>
+                                    <option value="DHCP">DHCP</option>
+                                    <option value="PPoE">PPoE</option>
+                                    <option value="SLAAC">SLAAC</option>
+                                </select>
+
+                            </td>
+                            <td>
+                                <div id="ip6-option-0">
+                                    <label for="ip6">IP:</label>
+                                    <input type="text" id="ip6-0" placeholder="8.8.8.8" name="ip6">
+                                </div>
+                                <div id="dhcp6-option-0">
+                                    <label for="dhcp4">DHCP:</label>
+                                    <input type="text" id="dhcp6-0" name="dhcp4">
+                                </div>
+                                <div id="username6-option-0">
+                                    <label for="username">UserName:</label>
+                                    <input type="text" id="username6-0" name="username">
+                                </div>
+                            </td>
+                            <td>
+                                <div id="prefix-length6-option-0">
+                                    <label for="prefix-length6">Prefix:</label>
+                                    <input type="text" id="prefix-length6-0" name="">
+                                </div>
+                                <div id="password6-option-0">
+                                    <label for="password">Password:</label>
+                                    <input type="password" id="password6-0" name="password">
+                                </div>
+                            </td>
+                            <td>
+                                <div id="gateway6-option-0">
+                                    <label for="gateway6">GateWay:</label>
+                                    <input type="text" id="gateway6-0" name="gateway6">
+                                </div>
+                               
+                            </td>
+                            <td>
+                                <div id ="static-nat-ip6-option-0">
+                                <label for="static-nat-ip6">Nat IP:</label>
+                                <input type="text" id="static-nat-ip6-0" name="static-nat-ip6">
+                                </div>
+                            </td>
+                            
+                        </tr>
+
+                    </table>
+                    <br>
+                </div>
+                
+            </div>
+        </fieldset>
+
+        <div>
+
+
+            <fieldset id="table4">
+                <legend class="name">Reachability</legend>
+
+                <div id="reachability">
+                    <table style="width:100%">
+                        <tr>
+                            <td>
+
+                                <input type="checkbox" id="cs" name="cs">
+                                <label for="cs">CS</label>
+                            </td>
+                            <td>
+
+                                <input type="checkbox" id="preferred-controller" name="preferred-controller">
+                                <label for="PreferredController">Preffered Controller</label>
+                            </td>
+                            <td>
+
+                                <input type="checkbox" id="gateway" name="gateway">
+                                <label for="gateway">Gateway</label>
+                            </td>
+                            <td>
+                                <div id="end-point4-option">
+                                    <label for="endpoint4">Endpointv4:</label>
+                                    <input type="text" id="end-point4" placeholder="8.8.8.8" name="end-point4">
+                                </div>
+                            </td>
+                            <td>
+                                <div id="end-point6-option">
+                                    <label for="endpoint6">Endpointv6:</label>
+                                    <input type="text" id="end-point6" placeholder="8.8.8.8" name="end-point6">
+                                </div>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </fieldset>
+        </div>
+        <br>
+
+        <div id="buttons">
+            <button id="save" value="submit" onclick="SubmitData()">Save</button>
+            
+            <div id="description" style ="width: 40%">
+                <span id="delete" value="submit" onclick="checkDelete()"  style ="width: 20%">Delete</span>
+                <div id= "confirm">
+                <label>Description:</label> 
+                <input type="text" id="delete-lable" name="checkbox"  style ="width: 20%">
+                <button id ="delete-btn" onclick="DeleteData()"  style ="width: 20%">Confirm Delete</button>
+                </div>
+            </div>
+        </div>
+        <!--<div id="description">
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <label>Are you sure, to delete the Interface?</label> 
+        </div>-->
+
+
+    </form>
+
+</body>
+
+</html>

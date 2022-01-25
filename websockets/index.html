@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Go WebSocket Tutorial</title>
+  </head>
+  <body>
+    <h2>Hello World</h2>
+    <p id ="socket" ></p>
+    <button onclick = display()>send</button>
+
+    <script>
+        let socket = new WebSocket("ws://127.0.0.1:8080/ws");
+        console.log("Attempting Connection...");
+
+        socket.onopen = () => {
+            console.log("Successfully Connected");
+            socket.send("Hi From the Client!")
+            socket.send("this is awesome!!!!!!!!")
+        };
+    
+        socket.onmessage = function (event) {
+        var parent = document.getElementById("socket")
+        console.log(event.data)
+        var element = document.createElement("p")
+        var child = document.createTextNode( JSON.parse(event.data))
+        element.appendChild(child)
+        parent.appendChild(element)
+       }
+    
+        socket.onclose = event => {
+            console.log("Socket Closed Connection: ", event);
+            socket.send("Client Closed!")
+        };
+
+        socket.onerror = error => {
+            console.log("Socket Error: ", error);
+        };
+        function display(){
+            var Person = {
+                Text : "sravan",
+                Info : "this is info"  
+            }
+            socket.send(JSON.stringify(Person))
+        }
+
+    </script>
+  </body>
+</html>

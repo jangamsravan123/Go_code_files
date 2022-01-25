@@ -1,0 +1,128 @@
+#table1, #table4, #table3, #table0, #table2 {
+  border: none;
+   border-top: 3px solid rgba(71, 72, 74,0.6);
+
+    
+}
+
+table{
+/*width:100%;*/
+/*text-align: left;*/
+
+}
+
+#table0{
+  padding :10px;
+}
+#table0 td{
+  width:20%;
+}
+
+#table0 span:hover{
+  width :25%;
+  background-color: orange;
+  border-radius: 5px;
+  text-decoration: none;
+  
+}
+
+#table0 span{
+  width :25%;
+  border-radius: 5px;
+  text-decoration: underline;
+  text-decoration-color:orange;
+  padding:2px 15px;
+  font-size: 20px;
+}
+
+#table1 td, #table3 td{
+  width: 100px;
+}
+
+/*#table4 table :nth-child(1),#table4 table :nth-child(2),#table4 table:nth-child(3){
+  width:15%;
+}
+#table4 table :nth-child(4),#table4  table:nth-child(5){
+  width:25%;
+}*/
+#table4 td{
+  width:18%;
+  padding: 0px;
+  margin: 0px;
+}
+#ip6-config td,#ip4-config td{
+width: 18%;
+/*margin-left: 5px;*/
+
+/*padding:1px 25px;*/
+}
+
+select {
+  width:50%;
+  box-sizing:border-box;
+  display:inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  /*padding: 8px 8px;*/
+  
+  }
+   input[type="text"],input[type="password"] {
+    width:50%;
+    box-sizing:border-box;
+    display:inline-block;
+    /*border: 1px solid #ccc;*/
+    border: none;
+    border-bottom: 2px solid rgba(74, 73, 73,0.6);
+    box-sizing: border-box;
+    padding: 0px;
+    margin-left: 5px;
+    /*padding: 8px 8px;*/
+    
+    }
+    * input:focus{
+      
+      outline: none;
+    }
+
+  #buttons, #delete {
+    text-align: center;
+  }
+
+  #buttons button, #delete {
+    padding :10px;
+     width : 8%;
+     border-radius: 5px;
+     margin-left: 30px;
+     border: 1px solid rgba(71, 72, 74,0.6);
+  }
+
+   #description, #delete {
+   /* background-color: rgba(199, 68, 28,0.5);*/
+    position:absolute;
+    left:0px;
+  }
+  #save:hover{
+    background-color: rgba(48, 48,48,0.6);
+    color:white;
+  }
+  
+  .name {
+    font-size : 20px;
+  }
+  .plus{
+    text-align: center;
+    float:right;
+    font-size : 30px;
+    width : 30px;
+    background-color:rgba(58, 156, 158,0.6);
+    border-radius: 50px;
+  }
+
+   #addip4, #addip6 {
+    background-color:rgba(106, 224, 70,0.6) ;
+    border-radius: 10px;
+  }
+  

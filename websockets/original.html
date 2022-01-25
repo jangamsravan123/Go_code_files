@@ -1,0 +1,115 @@
+<html>
+  <head>
+    
+   <script src = "interface.js"></script> 
+
+  </head>
+<body>
+  <script >
+   
+  </script>
+<form aria-disabled="">
+  <div>
+    <table style="width:100%">
+      <tr>
+        <td><span id = "0" onclick ="waninfo(0)"> wan </span> </td>
+        <td><span id = "1" onclick ="waninfo(1)"> lan</span> </td>
+        <td><span id = "2" onclick ="waninfo(2)"> wan </span> </td>
+        <td><span id = "3" onclick ="waninfo(3)"> lan</span> </td>
+        <td><span id = "4" onclick ="waninfo(4)"> lan</span> </td>
+        <td><span id = "5" onclick ="waninfo(5)"> lan</span> </td>
+       
+      </tr>
+    </table>
+  </div>
+  <label for="interface-name">Interface name:</label><br>
+  <select name="interface-name" id="interface-name">
+    <option value="">--select option--</option>
+    <option value="wan0">wan0</option>
+    <option value="wan1">wan1</option>  
+    <option value="wan2">wan2</option>
+    <option value="wan3">wan3</option> 
+    <option value="wan4">wan4</option>
+    <option value="wan5">wan5</option> 
+  </select><br>
+  <label for="port-type">Port type:</label><br>
+  <select name="port-type" id="port-type">
+    <option value="">--select option--</option>
+    <option value="Ethernet">Ethernet</option>
+    <option value="USB 3G/4G">3G/4G</option>
+    <option value="Onboard 4G">Onboard 4G</option>
+    <option value="v35-Modeum">v35-Modeum</option>
+  </select><br>
+  <label for="associated-port">Associated Port:</label><br>
+  <select name="associated-port" id="associated-port">
+    <option value="">--select option--</option>
+    <option value="eth1">eth1</option>
+    <option value="eth2">eth2</option>
+    <option value="usb-2">usb-2</option>
+    <option value="usb-3">usb-3</option>
+  </select><br>
+   <label for="vlan">Vlan:</label><br>
+  <input type="text" id="vlan" placeholder="enter vlan" name="vlan" ><br>
+  <label for="network-mode">Network Mode:</label><br>
+  <select name="network-Mode" id="network-mode">
+    <option value="">--select option--</option>
+    <option value="IPv4">IPv4</option>
+    <option value="IPv6">IPv6</option>
+  </select><br>
+   <label for="network-type">Type:</label><br>
+  <select name="network-type" id="type">
+    <option value="">--select option--</option>
+    <option value="static">static</option>
+    <option value="DHCP">DHCP</option>
+    <option value="PPoE">PPoE</option>
+    <option value="SLAAC">SLAAC</option>
+  </select><br>
+  <input type="checkbox" id="auto-dns"  onclick="ToggleAutoDNS()" name="auto dns">
+  <label for="dns">Ignore auto DNS:</label><br>
+  <div id ="dns-option">
+    <label for="dns">DNS</label><br>
+    <input type="text" id="dns" name="dns"><br>
+  </div>
+  <label for="mtu">MTU</label><br>
+  <input type="text" id="mtu" name="mtu"><br>
+  <label for="auto-neg">Auto Navigation:</label><br>
+  <select name="auto-neg" id="auto-neg" onchange="AutoNeg()">
+    <option value="">--select option--</option>
+    <option value="on">on</option>
+    <option value="off">off</option>
+  </select><br>
+  <div id ="auto-neg-on">
+    <label for="speed">Speed:</label><br>
+    <select name="speed" id="speed" >
+      <option value="">--select option--</option>
+      <option value="50">50</option>
+    <option value="100">100</option>
+    </select><br>
+    <label for="duplex">Duplex</label><br>
+    <select name="duplex" id="duplex" class = "auto-neg-on">
+      <option value="">--select option--</option>
+      <option>Duplex</option>
+      <option>Half Duplex</option>
+    </select><br>
+  </div>
+  <div>
+    <h4>Reachability</h4>
+    <label for="cs">CS</label><br>
+    <input type="checkbox" id="cs" name="cs"><br>
+    <label for="PreferredController">Preffered Controller</label><br>
+    <input type="checkbox" id="preferred-controller" name="preferred-controller"><br>
+    <label for="gateway">Gateway</label><br>
+    <input type="checkbox" id="gateway" name="gateway"><br>
+    <label for="endpoint">Endpoint(Ipv4)</label><br>
+    <input type="text" id="end-point" placeholder="8.8.8.8" name="end-point">
+  </div> 
+  <br>
+  <br>
+  <button value="submit" onclick = "SubmitData()">Submit</button>
+  
+  
+
+</form>
+</form>
+</body>
+</html>

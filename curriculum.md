@@ -1,0 +1,42 @@
+# Mastering Programming Curriculum
+- [ ] 1. BASH
+    - [ ] BASH commands
+        - [ ] echo, pipe,
+        - [ ] cat, less, more, wc
+        - [ ] find, grep, head, tail
+        - [ ] heredoc, redirection (>, >>)
+        - [ ] awk, sort, cut, tr
+        - [ ] condition (|| and &&)
+        - [ ] shell scripting
+            - [ ] loop
+            - [ ] variable, argument, subroutine
+    - [ ] CLI tools for developers
+        - [ ] curl or httpie
+        - [ ] socat or netcat
+        - [ ] htop
+- [ ] 2. Program construction
+    - [ ] Guide to construction
+        - [ ] 1.  keep the code simple and readable (like a story)
+        - [ ] 2.  mind-test while writing program
+        - [ ] 3.  evaluate conditions separately
+        - [ ] 4.  run silently, crash loudly
+        - [ ] 5.  log for others not yourself
+        - [ ] 6.  keep subroutine size small (<2 screen full or <~60 lines)
+        - [ ] 7.  prefer text over binary for messaging
+        - [ ] 8.  design your programs to talk to each other
+        - [ ] 9.  design the structure of data first
+        - [ ] 10. avoid frameworks, use minimal third-party libraries
+        - [ ] 11. dont follow any best practice
+        - [ ] 12. stick to SQL-based database
+    - [ ] program logging
+    - [ ] user interface
+    - [ ] TTY terminal
+- [ ] 3. Common technologies
+    - [ ] Redis
+    - [ ] SQL
+        - [ ] meaning of ACID
+        - [ ] structuring data into tables
+    - [ ] REST
+    - [ ] Websocket
+    - [ ] html, css
+    - [ ] Javascript

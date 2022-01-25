@@ -1,0 +1,16 @@
+{
+ "data": [
+  {
+   "InterfaceName": "wan0",
+   "PortType": "3G/4G",
+   "AssociatedPort": "eth1",
+   "Vlan": "153.72.4.1",
+   "NetworkMode": "IPv4",
+   "NetworkType": "static",
+   "MTU": "57896",
+   "Autoneg": "",
+   "Speed": "Item 1",
+   "Duplex": "Item 1"
+  }
+ ]
+}
